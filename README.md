@@ -1,5 +1,7 @@
 # Frontend Mentor - Interactive card details form
 
+[Preview link](https://heydarabbas89.github.io/Front-End-Mentor---ch02/)
+
 ![Design preview for the Interactive card details form coding challenge](preview.jpg)
 
 ## Welcome! 👋
