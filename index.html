@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Interactive card details form</title>
+		<script src="./main.js" defer></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- SideBar -->
+			<aside>
+				<div class="container">
+					<div class="cards">
+						<!-- Front card -->
+						<div class="front">
+							<figure>
+								<img src="./images/bg-card-front.png" alt="Front Card" />
+							</figure>
+							<!-- Front card info -->
+							<div class="front-card-info">
+								<div class="card-logo">
+									<figure>
+										<img src="./images/card-logo.svg" alt="Card logo" />
+									</figure>
+								</div>
+								<div id="cardNumber" class="card-number">
+									0000 0000 0000 0000
+								</div>
+								<div class="cardholder">
+									<div id="cardHolderName" class="cardholder-name">
+										Jane Appleseed
+									</div>
+									<div id="exp_date" class="exp-date">
+										<p id="cardMonth">00</p>
+										/
+										<p id="cardYear">00</p>
+									</div>
+								</div>
+							</div>
+							<!-- /Front card info -->
+						</div>
+						<!-- /Front card -->
+						<!-- Back card -->
+						<div class="back">
+							<figure>
+								<img src="./images/bg-card-back.png" alt="Back card" />
+							</figure>
+						</div>
+						<!-- /Back card -->
+					</div>
+				</div>
+			</aside>
+			<!-- /SideBar -->
+
+			<!-- Article -->
+			<article>
+				<div class="container">
+					<form id="appForm">
+						<!-- Cardholder Name -->
+						<div class="form-controller">
+							<label for="cardNameInput" class="form-label"
+								>Cardholder Name</label
+							>
+							<input
+								type="text"
+								class="form-input"
+								id="cardNameInput"
+								name="cardholdername"
+								placeholder="e.g. Jane Appleseed"
+								autofocus
+							/>
+							<p class="input-error" id="cardNameErr"></p>
+						</div>
+						<!-- /Cardholder Name -->
+						<!-- Card Number -->
+						<div class="form-controller">
+							<label for="cardNumberInput" class="form-label"
+								>Card Number</label
+							>
+							<input
+								type="text"
+								class="form-input"
+								id="cardNumberInput"
+								name="cardnumber"
+								placeholder="e.g. 1234 5678 9123 0000"
+							/>
+							<p class="input-error" id="cardNumberErr"></p>
+						</div>
+						<!-- /Card Number -->
+						<!-- EXP and CVC -->
+						<div class="exp-cvc">
+							<!-- EXP. Date -->
+							<div class="exp-date">
+								<label class="form-label">Exp. Date (MM/YY)</label>
+								<div class="exp-inputs">
+									<input
+										type="text"
+										name="month-date"
+										id="monthInput"
+										class="form-input"
+										placeholder="MM"
+									/>
+									<input
+										type="text"
+										name="year-date"
+										id="yearInput"
+										class="form-input"
+										placeholder="YY"
+									/>
+								</div>
+								<p class="input-error" id="expErr"></p>
+							</div>
+							<!-- /EXP. Date -->
+							<!-- CVC -->
+							<div class="cvc">
+								<label for="cvc_card" class="form-label">CVC</label>
+								<input
+									type="text"
+									name="cvc-card"
+									id="cvcInput"
+									class="form-input"
+									placeholder="e.g. 123"
+								/>
+								<p class="input-error" id="cvcErr"></p>
+							</div>
+							<!-- /CVC -->
+						</div>
+						<!-- /EXP and CVC -->
+						<button type="submit" class="form-button">Confirm</button>
+					</form>
+
+					<!-- Completed state start -->
+					<div id="completeState">
+						<div class="state-icon">
+							<img src="./images/icon-complete.svg" alt="Complete state" />
+						</div>
+						<h4>Thank you!</h4>
+						<p>We've added your card details</p>
+						<button id="completeStateBtn">Continue</button>
+					</div>
+					<!-- Completed state end -->
+				</div>
+			</article>
+			<!-- /Article -->
+		</div>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Heydar Abbas (Hisouby)</a>.
+		</div>
+	</body>
+</html>

@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --gradient-color: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+  --red-color: hsl(0, 100%, 66%);
+  --white-color: hsl(0, 100%, 100%);
+  --gray-200: hsl(270, 3%, 87%);
+  --gray-400: hsl(212, 12%, 71%);
+  --purple-color: hsl(278, 68%, 11%);
+  --font-family: "Space Grotesk", sans-serif;
+  --font-weight: 500;
+  --radius-border: 8px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+}
+body {
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+#app {
+  height: 100dvh;
+  color: var(--purple-color);
+  background-color: var(--white-color);
+}
+@media (width >=40rem) {
+  .container {
+    width: 375px;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+@media (width >=64rem) {
+  #app {
+    display: grid;
+    grid-template-columns: 24rem 1fr;
+  }
+  .container {
+    width: 100%;
+  }
+  .container:has(form) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (width >=90rem) {
+  #app {
+    grid-template-columns: 30rem 1fr;
+  }
+}
+aside {
+  padding: 2.2rem 1.4rem;
+  background-image: url('./images/bg-main-mobile.png');
+  height: fit-content;
+}
+@media (width >=64rem) {
+  aside {
+    height: 100dvh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+}
+aside .cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: relative;
+}
+aside .cards .front,
+aside .cards .back {
+  width: 80%;
+}
+@media (width >=64rem) {
+  aside .cards .front,
+  aside .cards .back {
+    width: 100%;
+  }
+}
+@media (width >=90rem) {
+  aside .cards .front,
+  aside .cards .back {
+    width: 29em;
+  }
+}
+aside .cards .front {
+  position: absolute;
+  top: 5.1rem;
+  left: 0;
+}
+@media (width >=64rem) {
+  aside .cards .front {
+    top: initial;
+    bottom: 50%;
+    left: 6em;
+  }
+  aside .cards .back {
+    position: absolute;
+    top: 53%;
+    left: 10em;
+  }
+}
+@media (width >=90rem) {
+  aside .cards .front {
+    left: 7.3em;
+  }
+  aside .cards .back {
+    left: 12em;
+  }
+}
+aside .cards img {
+  width: 100%;
+}
+aside .cards .front .front-card-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: var(--white-color);
+}
+@media (width >=90rem) {
+  aside .cards .front .front-card-info {
+    padding: 30px;
+  }
+}
+aside .cards .front .front-card-info .card-logo {
+  width: 3rem;
+  margin-bottom: 1.5rem;
+}
+@media (width >=40rem) {
+  aside .cards .front .front-card-info .card-logo {
+    margin-bottom: 36px;
+  }
+}
+@media (width >=64rem) {
+  aside .cards .front .front-card-info .card-logo {
+    width: 4em;
+    margin-bottom: 2.5em;
+  }
+}
+@media (width >=90rem) {
+  aside .cards .front .front-card-info .card-logo {
+    width: 5.5em;
+    margin-bottom: 3.5em;
+  }
+}
+aside .cards .front .front-card-info .card-number {
+  margin-bottom: 16px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+}
+@media (width >=40rem) {
+  aside .cards .front .front-card-info .card-number {
+    font-size: 20px;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+  }
+}
+@media (width >=64rem) {
+  aside .cards .front .front-card-info .card-number {
+    margin-bottom: 18px;
+    font-size: 24px;
+  }
+}
+@media (width >=90rem) {
+  aside .cards .front .front-card-info .card-number {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+}
+aside .cards .front .front-card-info .cardholder {
+  display: flex;
+  justify-content: space-between;
+}
+aside .cards .front .front-card-info .cardholder div {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media (width >=64rem) {
+  aside .cards .front .front-card-info .cardholder div {
+    font-size: 0.7em;
+  }
+}
+@media (width >=90rem) {
+  aside .cards .front .front-card-info .cardholder div {
+    font-size: 0.9em;
+  }
+}
+aside .cards .front .front-card-info .cardholder .exp-date {
+  display: flex;
+}
+article {
+  padding: 5rem 1.4rem 1.4rem;
+}
+article form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+@media (width >=64rem) {
+  article {
+    padding: 20px;
+  }
+  article form {
+    width: 18rem;
+  }
+}
+@media (width >=90rem) {
+  article form {
+    width: 22em;
+  }
+}
+article form .form-controller {
+  display: flex;
+  flex-direction: column;
+}
+article form .form-label {
+  display: inline-flex;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 1.3px;
+  font-size: 12px;
+}
+article form .input-error {
+  color: var(--red-color);
+  font-size: 10px;
+  margin-top: 5px;
+  display: none;
+}
+article form .form-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: var(--radius-border);
+  border: 1px solid var(--gray-200);
+  font-size: var(--font-size);
+}
+article form .form-input.error {
+  border-color: var(--red-color);
+}
+article form .form-input::placeholder {
+  color: var(--gray-400);
+}
+article form .form-input:focus {
+  outline: none;
+  border-color: hsl(278, 94%, 30%);
+}
+article form .form-input.error:focus {
+  border-color: var(--red-color);
+}
+article form .exp-cvc {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 20px;
+}
+article form .exp-cvc .exp-date,
+article form .exp-cvc .cvc {
+  flex-basis: 50%;
+}
+article form .exp-cvc .exp-inputs {
+  display: flex;
+  gap: .5rem;
+}
+article form .exp-cvc .exp-inputs input {
+  flex-basis: 50%;
+}
+article form .form-button {
+  background-color: var(--purple-color);
+  padding: 1rem;
+  text-align: center;
+  color: var(--white-color);
+  font-size: var(--font-size);
+  border-radius: var(--radius-border);
+  border: none;
+  cursor: pointer;
+}
+article form .form-button:hover {
+  background: linear-gradient(to right, var(--gradient-color));
+}
+
+/* Complete State */
+#completeState {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+}
+#completeState .state-icon {
+  margin-bottom: 20px;
+}
+#completeState h4 {
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+#completeState p {
+  font-size: 20px;
+  color: var(--gray-400);
+  margin-bottom: 2em;
+}
+#completeState button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  color: var(--white-color);
+  background-color: var(--purple-color);
+  border: none;
+  border-radius: 8px;
+}
+#completeState button:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, var(--gradient-color));
+}
