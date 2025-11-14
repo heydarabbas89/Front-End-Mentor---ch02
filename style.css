@@ -126,7 +126,7 @@ aside .cards .front .front-card-info {
   height: 100%;
   top: 0;
   left: 0;
-  padding: 1rem;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   color: var(--white-color);
@@ -161,7 +161,7 @@ aside .cards .front .front-card-info .card-number {
   margin-bottom: 16px;
   text-align: center;
   letter-spacing: 1.2px;
-  font-size: 18px;
+  font-size: 4.5dvw;
 }
 @media (width >=40rem) {
   aside .cards .front .front-card-info .card-number {
